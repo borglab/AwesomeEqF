@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description }}">
+  
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  
+  <!-- Custom CSS -->
+  <style>
+    .page-header {
+      background: linear-gradient(120deg, #155799, #159957);
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .page-header h1 {
+      color: white;
+      margin: 0;
+    }
+    .main-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .post-meta {
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 2em;
+    }
+    .post-content {
+      line-height: 1.6;
+    }
+    nav.navigation {
+      background: #f6f8fa;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+    nav.navigation a {
+      margin-right: 1.5rem;
+      text-decoration: none;
+      color: #155799;
+      font-weight: 500;
+    }
+    nav.navigation a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </header>
+  
+  <nav class="navigation">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/blog/' | relative_url }}">Blog</a>
+    <a href="{{ '/notebooks/' | relative_url }}">Notebooks</a>
+    <a href="https://github.com/{{ site.repository }}">GitHub</a>
+  </nav>
+  
+  <main class="main-content">
+    {{ content }}
+  </main>
+  
+  <footer style="text-align: center; padding: 2rem; border-top: 1px solid #ddd; margin-top: 3rem;">
+    <p>Maintained by the GTSAM community | <a href="https://github.com/{{ site.repository }}">View on GitHub</a></p>
+  </footer>
+</body>
+</html>
