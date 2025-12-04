@@ -1,12 +1,11 @@
 # Site settings
 title: Awesome Invariant and Equivariant Filtering
 description: A curated collection of resources on invariant and equivariant filtering for state estimation
-baseurl: "/AwesomeEqF"
-url: "https://borglab.github.io"
+baseurl: ""
+url: "http://localhost:4000"
 
-# Theme
+# Theme - using local theme instead of remote for development
 theme: jekyll-theme-cayman
-remote_theme: pages-themes/cayman@v0.2.0
 
 # Build settings
 markdown: kramdown

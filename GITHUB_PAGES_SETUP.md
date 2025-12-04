@@ -91,17 +91,74 @@ Content here...
 
 To test the site locally before deploying:
 
+### Quick Start (Recommended)
+
 ```bash
 # Install dependencies
 bundle install
 
-# Run Jekyll server
+# Run Jekyll server with development configuration
+bundle exec jekyll serve --config _config_dev.yml
+
+# Visit http://localhost:4000 in your browser
+```
+
+The `_config_dev.yml` file is configured for local development and avoids SSL certificate issues by using a local theme instead of a remote theme.
+
+### Using Production Configuration
+
+If you need to test with the production configuration (`_config.yml`), be aware that it uses a remote theme which may cause SSL certificate errors on some systems:
+
+```bash
 bundle exec jekyll serve
 
 # Visit http://localhost:4000/AwesomeEqF
 ```
 
+**Note:** The production config uses a different baseurl, so the site will be at `/AwesomeEqF` path.
+
+### SSL Certificate Troubleshooting
+
+If you encounter SSL certificate verification errors like:
+```
+SSL_connect returned=1 errno=0 state=error: certificate verify failed
+```
+
+**Solution 1: Use Development Config (Recommended)**
+```bash
+bundle exec jekyll serve --config _config_dev.yml
+```
+
+**Solution 2: Disable SSL Verification (⚠️ Use with caution - only in trusted local development environments)**
+```bash
+# macOS/Linux
+SSL_CERT_FILE="" bundle exec jekyll serve
+
+# Windows PowerShell
+$env:SSL_CERT_FILE=""; bundle exec jekyll serve
+```
+
+**Warning:** This disables SSL certificate verification entirely, which removes important security protections. Only use this workaround on trusted networks and for local development purposes.
+
+**Solution 3: Update Ruby SSL Certificates**
+```bash
+# macOS with Homebrew
+brew install openssl
+brew link --force openssl
+
+# Update Ruby certificates
+gem install certified
+```
+
 ## Troubleshooting
+
+### Local Development Issues
+
+**SSL Certificate Errors:**
+See the "SSL Certificate Troubleshooting" section under "Testing Locally" above. The recommended solution is to use the development configuration:
+```bash
+bundle exec jekyll serve --config _config_dev.yml
+```
 
 ### Site not building?
 - Check GitHub Actions tab for build errors
