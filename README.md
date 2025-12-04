@@ -163,7 +163,7 @@ This uses a local theme instead of fetching from GitHub, avoiding SSL issues.
 
 **Alternative Workaround (if needed):**
 
-If you need to use the production config with the remote theme, you can disable SSL verification (use with caution):
+If you need to use the production config with the remote theme, you can disable SSL verification (⚠️ **use with caution - only in trusted local development environments**):
 
 ```bash
 # macOS/Linux
@@ -173,6 +173,8 @@ SSL_CERT_FILE="" bundle exec jekyll serve
 export SSL_CERT_FILE=""
 bundle exec jekyll serve
 ```
+
+**Warning:** Disabling SSL certificate verification removes security protections. Only use this workaround on trusted networks and for local development.
 
 For more details on GitHub Pages setup, see [GITHUB_PAGES_SETUP.md](GITHUB_PAGES_SETUP.md).
 

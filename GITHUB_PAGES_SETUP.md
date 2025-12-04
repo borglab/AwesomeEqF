@@ -129,7 +129,7 @@ SSL_connect returned=1 errno=0 state=error: certificate verify failed
 bundle exec jekyll serve --config _config_dev.yml
 ```
 
-**Solution 2: Disable SSL Verification (Use with caution)**
+**Solution 2: Disable SSL Verification (⚠️ Use with caution - only in trusted local development environments)**
 ```bash
 # macOS/Linux
 SSL_CERT_FILE="" bundle exec jekyll serve
@@ -137,6 +137,8 @@ SSL_CERT_FILE="" bundle exec jekyll serve
 # Windows PowerShell
 $env:SSL_CERT_FILE=""; bundle exec jekyll serve
 ```
+
+**Warning:** This disables SSL certificate verification entirely, which removes important security protections. Only use this workaround on trusted networks and for local development purposes.
 
 **Solution 3: Update Ruby SSL Certificates**
 ```bash
