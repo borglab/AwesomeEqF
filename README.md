@@ -128,6 +128,54 @@ Invariant and Equivariant filtering methods address the challenges of state esti
 - **[Awesome Visual SLAM](https://github.com/tzutalin/awesome-visual-slam)** - Visual SLAM resources
 - **[Awesome Robotics](https://github.com/kiloreux/awesome-robotics)** - General robotics resources
 
+## 🖥️ Local Development
+
+To preview the website locally:
+
+### Prerequisites
+
+- Ruby (version 2.7 or higher recommended)
+- Bundler gem
+
+### Setup and Run
+
+```bash
+# Install dependencies
+bundle install
+
+# Serve the site locally using the development configuration
+bundle exec jekyll serve --config _config_dev.yml
+
+# Visit http://localhost:4000 in your browser
+```
+
+### Troubleshooting
+
+**SSL Certificate Error with Remote Theme:**
+
+If you encounter SSL certificate verification errors when using the default `_config.yml`, use the development configuration instead:
+
+```bash
+bundle exec jekyll serve --config _config_dev.yml
+```
+
+This uses a local theme instead of fetching from GitHub, avoiding SSL issues.
+
+**Alternative Workaround (if needed):**
+
+If you need to use the production config with the remote theme, you can disable SSL verification (use with caution):
+
+```bash
+# macOS/Linux
+SSL_CERT_FILE="" bundle exec jekyll serve
+
+# Or set an environment variable
+export SSL_CERT_FILE=""
+bundle exec jekyll serve
+```
+
+For more details on GitHub Pages setup, see [GITHUB_PAGES_SETUP.md](GITHUB_PAGES_SETUP.md).
+
 ## 📝 Contributing
 
 We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit papers, resources, or corrections.
