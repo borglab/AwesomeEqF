@@ -7,8 +7,6 @@ author: AwesomeEqF Team
 excerpt: "Introducing a curated collection of resources on invariant and equivariant filtering for state estimation on manifolds and Lie groups."
 ---
 
-# Welcome to AwesomeEqF!
-
 We're excited to launch **Awesome Invariant and Equivariant Filtering** (AwesomeEqF), a community-driven resource for researchers, engineers, and students interested in advanced state estimation techniques on manifolds and Lie groups.
 
 ## Why AwesomeEqF?

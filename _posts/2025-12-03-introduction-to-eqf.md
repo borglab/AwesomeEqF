@@ -7,8 +7,6 @@ author: AwesomeEqF Contributors
 excerpt: "Exploring the Equivariant Filter (EqF) framework, a general approach to observer design on homogeneous spaces that unifies and extends invariant filtering methods."
 ---
 
-# Introduction to Equivariant Filters
-
 Following our [previous post on IEKF](/AwesomeEqF/blog/2024/11/15/understanding-iekf/), let's explore the Equivariant Filter (EqF)—a powerful generalization that takes invariant filtering to the next level.
 
 ## Beyond Invariant Filters
