@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to AwesomeEqF!"
-date: 2024-12-08
+date: 2025-12-03
 categories: announcement
 author: AwesomeEqF Team
 excerpt: "Introducing a curated collection of resources on invariant and equivariant filtering for state estimation on manifolds and Lie groups."
