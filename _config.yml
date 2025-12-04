@@ -1,0 +1,62 @@
+# Site settings
+title: Awesome Invariant and Equivariant Filtering
+description: A curated collection of resources on invariant and equivariant filtering for state estimation
+baseurl: "/AwesomeEqF"
+url: "https://borglab.github.io"
+
+# Theme
+theme: jekyll-theme-cayman
+remote_theme: pages-themes/cayman@v0.2.0
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - vendor
+  - .bundle
+  - .git
+  - .gitignore
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "AwesomeEqF Contributors"
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog/
+  - title: Notebooks
+    url: /notebooks/
+  - title: Resources
+    url: https://github.com/borglab/AwesomeEqF
+
+# Social
+github_username: borglab
+repository: borglab/AwesomeEqF
+
+# Analytics (optional)
+# google_analytics: UA-XXXXXXXX-X
