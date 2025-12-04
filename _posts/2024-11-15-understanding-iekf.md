@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: post
 title: "Understanding the Invariant Extended Kalman Filter"
-date: 2025-12-10
+date: 2024-11-15
 categories: tutorial
 author: AwesomeEqF Contributors
 excerpt: "A deep dive into the Invariant Extended Kalman Filter (IEKF), exploring how it improves state estimation on Lie groups through exploiting system symmetries."
