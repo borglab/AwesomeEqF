@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Introduction to Equivariant Filters"
-date: 2024-11-01
+date: 2025-12-12
 categories: tutorial
 author: AwesomeEqF Contributors
 excerpt: "Exploring the Equivariant Filter (EqF) framework, a general approach to observer design on homogeneous spaces that unifies and extends invariant filtering methods."

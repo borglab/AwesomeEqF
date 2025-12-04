@@ -146,6 +146,16 @@ We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING
 - Provide working links to papers or resources
 - Maintain the awesome list spirit: quality over quantity
 
+## 👥 Contributors
+
+This project originated at **Georgia Tech** and is maintained by the GTSAM community.
+
+**Core Contributors:**
+- **Rohan Madan** - Initial curation and project setup
+- **Frank Dellaert** - Project guidance and oversight
+
+We welcome contributions from the community! See [Contributing Guidelines](CONTRIBUTING.md) for details.
+
 ## 📄 License
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
@@ -154,4 +164,4 @@ This list is released under Creative Commons Zero v1.0 Universal license.
 
 ---
 
-**Maintained by the GTSAM community** | [Website](https://borglab.github.io/AwesomeEqF) | [Contribute](CONTRIBUTING.md)
+**Maintained by the GTSAM community** | **Originated at Georgia Tech** | [Website](https://borglab.github.io/AwesomeEqF) | [Contribute](CONTRIBUTING.md)

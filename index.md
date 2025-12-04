@@ -76,6 +76,16 @@ See our [Contributing Guide](https://github.com/borglab/AwesomeEqF/blob/main/CON
 
 ---
 
+## 👥 Contributors
+
+This project originated at **Georgia Tech** and is maintained by the GTSAM community.
+
+**Core Contributors:**
+- **Rohan Madan** - Initial curation and project setup
+- **Frank Dellaert** - Project guidance and oversight
+
+---
+
 <div style="text-align: center; margin-top: 3em; padding-top: 2em; border-top: 1px solid #ddd;">
-  <p>Maintained by the GTSAM community | <a href="https://github.com/borglab/AwesomeEqF">View on GitHub</a></p>
+  <p>Originated at Georgia Tech | Maintained by the GTSAM community | <a href="https://github.com/borglab/AwesomeEqF">View on GitHub</a></p>
 </div>
