@@ -151,7 +151,7 @@ We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING
 This project originated at **Georgia Tech** and is maintained by the GTSAM community.
 
 **Core Contributors:**
-- **Rohan Madan** - Initial curation and project setup
+- **Rohan Bansal** - Initial curation and project setup
 - **Frank Dellaert** - Project guidance and oversight
 
 We welcome contributions from the community! See [Contributing Guidelines](CONTRIBUTING.md) for details.
