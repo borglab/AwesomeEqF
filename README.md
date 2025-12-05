@@ -71,7 +71,7 @@ Invariant and Equivariant filtering methods address the challenges of state esti
   *Various Authors*  
   Combines covariance reset steps for improved performance in tightly coupled systems.
 
-- **[The Difference between the Left and Right Invariant Extended Kalman Filter](https://arxiv.org/pdf/2507.04568)** (2024)  
+- **[The Difference between the Left and Right Invariant Extended Kalman Filter](https://arxiv.org/pdf/2407.04568)** (2024)  
   Shows that left and right IEKF variants yield identical performance with proper reset steps.
 
 - **[Equivariant Systems Theory and Observer Design](https://arxiv.org/abs/2006.08276)** (2020)  

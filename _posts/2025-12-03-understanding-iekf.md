@@ -1,13 +1,11 @@
 ---
-layout: default
+layout: post
 title: "Understanding the Invariant Extended Kalman Filter"
-date: 2025-12-10
+date: 2025-12-03
 categories: tutorial
 author: AwesomeEqF Contributors
 excerpt: "A deep dive into the Invariant Extended Kalman Filter (IEKF), exploring how it improves state estimation on Lie groups through exploiting system symmetries."
 ---
-
-# Understanding the Invariant Extended Kalman Filter
 
 The Invariant Extended Kalman Filter (IEKF) represents a significant advancement in state estimation for systems evolving on manifolds and Lie groups. In this post, we'll explore what makes the IEKF special and why it often outperforms the traditional EKF.
 
