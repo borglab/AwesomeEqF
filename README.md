@@ -96,12 +96,11 @@ Invariant and Equivariant filtering methods address the challenges of state esti
 
 - **[EqF-VIO](https://github.com/pvangoor/eqf_vio)** - Equivariant Filter for Visual-Inertial Odometry
 - **[IEKF-SLAM](https://github.com/CAOR-MINES-ParisTech/ukfm)** - Unscented Kalman Filter on Manifolds
-- **[ManifoldEKF.jl](https://github.com/JuliaRobotics/ManifoldEKF.jl)** - Julia implementation of manifold EKF
 
 ## 🎓 Tutorials and Talks
 
 - **[GTSAM EKF Variants Tutorial](https://borglab.github.io/gtsam/ekf-variants/)** - Interactive documentation with examples
-- **[Invariant Filtering Tutorial](https://www.youtube.com/watch?v=nJgW3pL5Qgw)** - Video introduction to invariant filtering
+<!-- - **[Invariant Filtering Tutorial](https://www.youtube.com/watch?v=nJgW3pL5Qgw)** - Video introduction to invariant filtering -->
 - **[Lie Groups for 2D and 3D Transformations](https://ethaneade.com/lie.pdf)** - Primer on Lie groups in robotics by Ethan Eade
 
 ## 🔬 Applications

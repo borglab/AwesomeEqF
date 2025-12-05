@@ -12,17 +12,17 @@ Interactive Jupyter notebooks demonstrating invariant and equivariant filtering 
 
 ### Getting Started
 
-- **[Introduction to Invariant EKF](../notebooks/01_intro_to_iekf.ipynb)** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/borglab/AwesomeEqF/blob/main/notebooks/01_intro_to_iekf.ipynb)
+- **[Introduction to Invariant EKF](./notebooks/01_intro_to_iekf.ipynb)** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/borglab/AwesomeEqF/blob/main/notebooks/01_intro_to_iekf.ipynb)
   
   A gentle introduction to the Invariant Extended Kalman Filter with a simple attitude estimation example.
 
-- **[Equivariant Filter Basics](../notebooks/02_equivariant_filter_basics.ipynb)** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/borglab/AwesomeEqF/blob/main/notebooks/02_equivariant_filter_basics.ipynb)
+- **[Equivariant Filter Basics](./notebooks/02_equivariant_filter_basics.ipynb)** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/borglab/AwesomeEqF/blob/main/notebooks/02_equivariant_filter_basics.ipynb)
   
   Understanding the principles of equivariant filtering through hands-on examples.
 
 ### Advanced Topics
 
-- **[Visual-Inertial Odometry with IEKF](../notebooks/03_vio_with_iekf.ipynb)** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/borglab/AwesomeEqF/blob/main/notebooks/03_vio_with_iekf.ipynb)
+- **[Visual-Inertial Odometry with IEKF](./notebooks/03_vio_with_iekf.ipynb)** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/borglab/AwesomeEqF/blob/main/notebooks/03_vio_with_iekf.ipynb)
   
   Implementing a visual-inertial odometry system using the Invariant EKF.
 
