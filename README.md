@@ -61,7 +61,7 @@ Invariant and Equivariant filtering methods address the challenges of state esti
   *Pieter van Goor, Tarek Hamel, Robert Mahony*  
   Extended version with detailed theoretical development.
 
-- **[Observer Design on the Special Euclidean Group SE(3)](https://www.sciencedirect.com/science/article/pii/S1474667016397453)** (2007)  
+- **[Observer Design on the Special Euclidean Group SE(3)](https://ieeexplore.ieee.org/document/6160453)** (2011)  
   *Robert Mahony, Tarek Hamel*  
   Early work on observer design for pose estimation on SE(3).
 
@@ -71,14 +71,14 @@ Invariant and Equivariant filtering methods address the challenges of state esti
   *Various Authors*  
   Combines covariance reset steps for improved performance in tightly coupled systems.
 
-- **[The Difference between the Left and Right Invariant Extended Kalman Filter](https://arxiv.org/pdf/2407.04568)** (2024)  
+- **[The Difference between the Left and Right Invariant Extended Kalman Filter](https://arxiv.org/abs/2507.04568)** (2024)  
   Shows that left and right IEKF variants yield identical performance with proper reset steps.
 
 - **[Equivariant Systems Theory and Observer Design](https://arxiv.org/abs/2006.08276)** (2020)  
   *Pieter van Goor, Robert Mahony*  
   Unified framework connecting invariant and equivariant approaches.
 
-- **[Invariant Kalman Filtering for Visual-Inertial SLAM](https://ieeexplore.ieee.org/document/8206267)** (2018)  
+- **[Invariant Kalman Filtering for Visual-Inertial SLAM](https://ieeexplore.ieee.org/document/8455807)** (2018)  
   Application of IEKF to visual-inertial odometry and SLAM.
 
 ## 💻 Software and Libraries
