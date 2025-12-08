@@ -27,6 +27,7 @@ Invariant and Equivariant filtering methods address the challenges of state esti
 - **Provide better stability** for attitude and navigation estimation
 
 **Key Concepts:**
+
 - **Invariant Filters**: Use invariant error metrics that respect the geometry of the state space
 - **Equivariant Filters**: Leverage system equivariance properties for improved observer design
 - **Lie Groups**: Mathematical structures (e.g., SO(3), SE(3)) naturally representing rotations and poses
@@ -36,46 +37,54 @@ Invariant and Equivariant filtering methods address the challenges of state esti
 ### Invariant Extended Kalman Filter (IEKF)
 
 - **[Invariant Extended Kalman Filter: theory and application to a velocity-aided attitude estimation problem](http://www.silvere-bonnabel.com/pdf/CDC2009IEKF.pdf)** (2009)  
-  *Silvère Bonnabel, Philippe Martin, Pierre Rouchon*  
+  _Silvère Bonnabel, Philippe Martin, Pierre Rouchon_  
   The seminal paper introducing the IEKF, showing improved consistency for attitude estimation.
 
+- **[The Invariant Extended Kalman Filter as a Stable Observer](https://arxiv.org/abs/1410.1465)** (2016)  
+  _Axel Barrau, Silvère Bonnabel_  
+  Rigorous stability analysis of the IEKF, establishing conditions for local asymptotic stability.
+
 - **[Symmetry-preserving observers](https://ieeexplore.ieee.org/document/1339919)** (2004)  
-  *A. Saccon, A. P. Aguiar, A. M. Pascoal*  
+  _A. Saccon, A. P. Aguiar, A. M. Pascoal_  
   Early work on observer design that preserves system symmetries.
 
-- **[Non-linear state error based extended Kalman filters with applications to navigation](https://pastel.archives-ouvertes.fr/pastel-00996084)** (2013)  
-  *Axel Barrau*  
+- **[Non-linear state error based extended Kalman filters with applications to navigation](https://theses.hal.science/tel-01344622/)** (2013)  
+  _Axel Barrau_  
   Comprehensive PhD thesis on IEKF theory and applications.
 
 - **[Equivariant Filter Design for Kinematic Systems on Lie Groups](https://www.sciencedirect.com/science/article/pii/S240589632100642X)** (2021)  
-  *Alessandro Saccon et al.*  
+  _Alessandro Saccon et al._  
   Framework for embedding kinematic systems on Lie groups into equivariant systems.
 
 ### Equivariant Filter (EqF)
 
+- **[Nonlinear Complementary Filters on the Special Orthogonal Group](https://arxiv.org/abs/0806.0620)** (2008)  
+  _Robert Mahony, Tarek Hamel, Jean-Michel Pflimlin_  
+  Early nonlinear complementary filter on SO(3) that strongly influenced later invariant and equivariant attitude observers.
+
 - **[Equivariant Filter (EqF)](https://arxiv.org/abs/2010.14666)** (2021)  
-  *Pieter van Goor, Tarek Hamel, Robert Mahony*  
+  _Pieter van Goor, Tarek Hamel, Robert Mahony_  
   The foundational paper on equivariant filtering for systems on homogeneous spaces.
 
 - **[EQUIVARIANT FILTER (EQF): A GENERAL FILTER DESIGN FOR SYSTEMS ON HOMOGENEOUS SPACES](https://arxiv.org/pdf/2107.05193)** (2021)  
-  *Pieter van Goor, Tarek Hamel, Robert Mahony*  
+  _Pieter van Goor, Tarek Hamel, Robert Mahony_  
   Extended version with detailed theoretical development.
 
 - **[Observer Design on the Special Euclidean Group SE(3)](https://ieeexplore.ieee.org/document/6160453)** (2011)  
-  *Robert Mahony, Tarek Hamel*  
+  _Robert Mahony, Tarek Hamel_  
   Early work on observer design for pose estimation on SE(3).
 
 ## 🚀 Recent Advances
 
 - **[An Iterated Equivariant Filter and Its Application in Tightly Coupled GNSS/INS](https://ieeexplore.ieee.org/document/10979539)** (2024)  
-  *Various Authors*  
+  _Various Authors_  
   Combines covariance reset steps for improved performance in tightly coupled systems.
 
 - **[The Difference between the Left and Right Invariant Extended Kalman Filter](https://arxiv.org/abs/2507.04568)** (2024)  
   Shows that left and right IEKF variants yield identical performance with proper reset steps.
 
 - **[Equivariant Systems Theory and Observer Design](https://arxiv.org/abs/2006.08276)** (2020)  
-  *Pieter van Goor, Robert Mahony*  
+  _Pieter van Goor, Robert Mahony_  
   Unified framework connecting invariant and equivariant approaches.
 
 - **[Invariant Kalman Filtering for Visual-Inertial SLAM](https://ieeexplore.ieee.org/document/8455807)** (2018)  
@@ -106,16 +115,19 @@ Invariant and Equivariant filtering methods address the challenges of state esti
 ## 🔬 Applications
 
 ### Navigation and IMU Integration
+
 - Dead reckoning and INS/GNSS fusion
 - Attitude estimation for aerospace applications
 - Underwater vehicle navigation
 
 ### Visual-Inertial Odometry (VIO)
+
 - SLAM and visual odometry
 - Camera-IMU sensor fusion
 - Pose tracking for AR/VR
 
 ### Robotics
+
 - Legged robot state estimation
 - Aerial vehicle control
 - Manipulation and motion planning
@@ -123,7 +135,6 @@ Invariant and Equivariant filtering methods address the challenges of state esti
 ## 🌐 Related Resources
 
 - **[Awesome invariant-and-equivariant filter-and-observer](https://github.com/LYRen1900/Awesome-invariant-and-equivariant-filter-and-observer)** - Another curated list with additional resources
-- **[Awesome SLAM](https://github.com/youngguncho/awesome-slam)** - Related work on SLAM algorithms
 - **[Awesome Visual SLAM](https://github.com/tzutalin/awesome-visual-slam)** - Visual SLAM resources
 - **[Awesome Robotics](https://github.com/kiloreux/awesome-robotics)** - General robotics resources
 
@@ -200,6 +211,7 @@ We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING
 This project originated at **Georgia Tech** and is maintained by the GTSAM community.
 
 **Core Contributors:**
+
 - **Rohan Bansal** - Initial curation and project setup
 - **Frank Dellaert** - Project guidance and oversight
 
@@ -213,4 +225,4 @@ This list is released under Creative Commons Zero v1.0 Universal license.
 
 ---
 
-**Maintained by the GTSAM community** | **Originated at Georgia Tech** | [Website](https://borglab.github.io/AwesomeEqF) | [Contribute](CONTRIBUTING.md)
+**Maintained by the GTSAM community** | **Originated at Georgia Tech** | [Website](https://github.com/borglab/AwesomeEqF) | [Contribute](CONTRIBUTING.md)
