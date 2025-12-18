@@ -1,62 +1,31 @@
-# Site settings
 title: Awesome Invariant and Equivariant Filtering
-description: A curated collection of resources on invariant and equivariant filtering for state estimation
-baseurl: "/AwesomeEqF"
-url: "https://borglab.github.io"
+author: GTSAM community
+logo: null
 
-# Theme
-theme: jekyll-theme-cayman
-remote_theme: pages-themes/cayman@v0.2.0
+repository:
+  url: https://github.com/borglab/AwesomeEqF
+  path_to_docs: .
+  branch: main
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: false
+  baseurl: https://borglab.github.io/AwesomeEqF/
 
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
+execute:
+  execute_notebooks: auto
+  timeout: 120
 
-# Exclude from processing
-exclude:
-  - vendor
-  - .bundle
-  - .git
-  - .gitignore
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:day/:title/
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      author: "AwesomeEqF Contributors"
-
-# Navigation
-navigation:
-  - title: Home
-    url: /
-  - title: Blog
-    url: /blog/
-  - title: Notebooks
-    url: /notebooks/
-  - title: Resources
-    url: https://github.com/borglab/AwesomeEqF
-
-# Social
-github_username: borglab
-repository: borglab/AwesomeEqF
-
-# Analytics (optional)
-# google_analytics: G-XXXXXXXXXX
+sphinx:
+  config:
+    myst_enable_extensions:
+      - amsmath
+      - colon_fence
+      - deflist
+      - dollarmath
+      - html_image
+    html_theme_options:
+      default_mode: light
+      show_nav_level: 3
+      collapse_navigation: false
