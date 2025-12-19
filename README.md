@@ -18,7 +18,7 @@ cd AwesomeEqF
 From the repository root:
 
 ```bash
-uv init .
+uv sync
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 

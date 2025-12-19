@@ -32,7 +32,7 @@ git clone https://github.com/borglab/AwesomeEqF.git
 cd AwesomeEqF
 
 # Create a virtual environment using uv
-uv init .
+uv sync
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
 # Install dependencies
