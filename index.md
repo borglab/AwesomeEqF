@@ -2,7 +2,7 @@
 title: 🕶️ Awesome Equivariant Filtering
 ---
 
-Welcome to **AwesomeEqF**, a curated collection of the latest and greatest literature on invariant and equivariant filtering. 
+Welcome to **AwesomeEqF**, a curated collection of the latest and greatest literature on equivariant (and invariant) filtering. 
 
 Explore the [Papers and Reading](papers.md) for a structured list of key literature and check out our practical [Examples and Implementations](notebooks.md), made simple through the use of [GTSAM](https://github.com/borglab/gtsam).
 
@@ -10,7 +10,7 @@ Be sure to browse our [Blog](blog.md) posts as well, which will be updated with 
 
 ### 📚 How to Use This Site
 
-**I have no idea what "EqFs" are, let alone a "filter"!**  
+**I have no idea what "EqFs" are!**  
   Check out the [intro blog post first](blog/2025-12-18-welcome.md) for an explanation! Then, feel free to follow the **Papers and Reading** page for a structured list of key papers as per your interest.
 
 **I want to see things in action!**  

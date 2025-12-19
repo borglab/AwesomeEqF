@@ -1,4 +1,4 @@
-# Awesome Invariant and Equivariant Filtering [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Equivariant Filtering [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 **AwesomeEqF** is a community hub for invariant and equivariant filtering on manifolds and Lie groups.  
 

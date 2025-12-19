@@ -8,8 +8,9 @@ project:
     - file: notebooks.md
       children:
         - file: notebooks/01_intro_to_iekf.ipynb
-        - file: notebooks/02_equivariant_filter_basics.ipynb
+        - file: notebooks/02_intro_to_eqf.ipynb
         - file: notebooks/03_vio_with_iekf.ipynb
+        - file: notebooks/04_vio_with_eqf.ipynb
     - file: blog.md
       children:
         - file: blog/2025-12-18-welcome.md
