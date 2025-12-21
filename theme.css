@@ -1,5 +1,5 @@
 /* Subtle dotted background for the whole site */
-body {
+/* body {
   background-color: #fafbff;
   background-image: radial-gradient(
     circle at 1px 1px,
@@ -7,7 +7,7 @@ body {
     transparent 0
   );
   background-size: 18px 18px;
-}
+} */
 
 /* Keep the main content panels readable (slightly elevated) */
 .myst-book-theme main,

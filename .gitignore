@@ -52,3 +52,7 @@ temp/
 
 # MyST build outputs
 _build
+
+# uv
+.venv/
+*.lock

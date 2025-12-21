@@ -132,16 +132,6 @@ This page collects and categorizes key papers on invariant and equivariant filte
   _Dian Wang, Boce Hu, Shuran Song, Robin Walters, Robert Platt_  
   Practical guidance on incorporating symmetry into diffusion policies without requiring fully equivariant architectures.
 
-### 4.2 Equivariant Neural Networks & Observers
-
-- **[Vector Neurons: A General Framework for SO(3)-Equivariant Networks](https://arxiv.org/abs/2104.12229)** (2021)  
-  _Congyue Deng, Or Litany, Yueqi Duan, Adrien Poulenard, Andrea Tagliasacchi, Leonidas J. Guibas_  
-  Foundational paper for rotation-equivariant point cloud processing.
-
-- **[Lie Neurons: Adjoint-Equivariant Neural Networks for Semisimple Lie Algebras](https://arxiv.org/abs/2310.04521)** (2024)  
-  _Tzu-Yuan Lin, Minghan Zhu, Maani Ghaffari_  
-  Generalizes Vector Neurons to arbitrary semisimple Lie algebras using the adjoint representation, applicable to complex state estimation tasks.
-
 ## 5. Surveys and Tutorials
 
 - **[A Micro Lie Theory for State Estimation in Robotics](https://arxiv.org/abs/1812.01537)** (2018)  
