@@ -1,0 +1,27 @@
+version: 1
+project:
+  title: AwesomeEqF!
+  github: borglab/AwesomeEqF
+  toc:
+    - file: index.md
+    - file: papers.md
+    - file: notebooks.md
+      children:
+        - file: notebooks/01_intro_to_iekf.ipynb
+        - file: notebooks/02_intro_to_eqf.ipynb
+        - file: notebooks/03_vio_with_iekf.ipynb
+        - file: notebooks/04_vio_with_eqf.ipynb
+    - file: blog.md
+      children:
+        - file: blog/2025-12-18-welcome.md
+    - file: CONTRIBUTING.md
+site:
+  options:
+    folders: true
+    logo_text: AwesomeEqF 🔁
+    favicon: favicon.svg
+    style: theme.css
+  template: book-theme
+  parts:
+    primary_sidebar_footer: |
+      Powered by [GTSAM](https://github.com/borglab/gtsam) ·  Built with [MyST](https://mystmd.org)

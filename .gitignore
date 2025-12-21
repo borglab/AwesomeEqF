@@ -49,3 +49,10 @@ ENV/
 tmp/
 temp/
 *.tmp
+
+# MyST build outputs
+_build
+
+# uv
+.venv/
+*.lock

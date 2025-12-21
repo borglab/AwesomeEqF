@@ -1,8 +1,8 @@
-# Contributing to Awesome Invariant and Equivariant Filtering
+---
+title: Contributing
+---
 
-First off, thank you for considering contributing to this awesome list! 🎉
-
-## How Can I Contribute?
+## How Can I Contribute to Awesome Invariant and Equivariant Filtering?
 
 ### Adding a New Resource
 
@@ -14,13 +14,15 @@ First off, thank you for considering contributing to this awesome list! 🎉
 ### Formatting Guidelines
 
 **For papers:**
+
 ```markdown
 - **[Paper Title](link-to-paper)** (Year)  
-  *Author Names*  
+  _Author Names_  
   Brief description of the contribution.
 ```
 
 **For software/libraries:**
+
 ```markdown
 - **[Project Name](link-to-repo)** - Brief description
   - Key features or variants
@@ -29,6 +31,7 @@ First off, thank you for considering contributing to this awesome list! 🎉
 ### What to Include
 
 ✅ **Do include:**
+
 - Peer-reviewed papers on invariant or equivariant filtering
 - Open-source software implementations
 - Educational resources (tutorials, lectures, documentation)
@@ -36,6 +39,7 @@ First off, thank you for considering contributing to this awesome list! 🎉
 - Related awesome lists or curated resources
 
 ❌ **Don't include:**
+
 - Unpublished work without preprints
 - Commercial or closed-source software
 - Duplicate entries
@@ -44,12 +48,54 @@ First off, thank you for considering contributing to this awesome list! 🎉
 ### Sections
 
 Resources should be added to appropriate sections:
+
 - **Foundational Papers**: Seminal works that established the field
 - **Recent Advances**: Papers from the last 3-5 years
 - **Software and Libraries**: Open-source implementations
 - **Tutorials and Talks**: Educational materials
 - **Applications**: Domain-specific use cases
 - **Related Resources**: Adjacent topics and lists
+
+### Blog Posts
+
+We welcome focused blog posts that:
+
+- Explain concepts in invariant / equivariant filtering
+- Summarize or contextualize specific papers
+- Walk through implementations or examples (ideally linked to notebooks)
+
+To add a blog post:
+
+1. **Create a new Markdown file** under the `blog/` folder, for example:  
+   `blog/2025-12-20-iekf-vs-eqf-notes.md`
+
+2. **Add minimal front matter** with a title:
+
+   ```yaml
+   ---
+   title: Your Post Title
+   ---
+   ```
+
+3. **Start the post** with an optional header block:
+
+   ```markdown
+   > **Date:** YYYY-MM-DD  
+   > **Author:** Your Name
+   ```
+
+4. **Write the content** in regular Markdown / MyST (equations, code blocks, images are all fine).
+
+5. **Wire it into navigation** by updating `myst.yml`:
+
+   ```yaml
+   - file: blog.md
+     children:
+       - file: blog/2025-12-18-welcome.md
+       - file: blog/2025-12-20-iekf-vs-eqf-notes.md
+   ```
+
+6. Optionally, **add a link** to the new post under **Latest Posts** in `blog.md`.
 
 ### Quality Standards
 
