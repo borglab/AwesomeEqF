@@ -7,21 +7,10 @@ title: Examples and Implementations
 This section collects **notebook implementations of key papers and ideas** in invariant and equivariant filtering.
 All notebooks are rendered directly on the site via MyST / Jupyter Book, so you can see code, equations, and figures inline.
 
-## 📓 Getting Started
+## 📓 Topics
 
-- **Invariant EKF Basics** (`notebooks/01_intro_to_iekf.ipynb`)  
-  A gentle introduction to the Invariant Extended Kalman Filter with a simple attitude estimation example.
-
-- **Equivariant Filter Basics** (`notebooks/02_intro_to_eqf.ipynb`)  
-  Understanding the principles of equivariant filtering through the same attitude estimation example.
-
-## 🔬 Advanced Topics
-
-- **Visual-Inertial Odometry with IEKF** (`notebooks/03_vio_with_iekf.ipynb`)  
-  Implementing a visual-inertial odometry system using the Invariant EKF.
-
-- **Visual-Inertial Odometry with EqF** (`notebooks/04_vio_with_eqf.ipynb`)  
-  Implementing a visual-inertial odometry system using an EqF.
+- **ABC Equivariant Filter** (`notebooks/01_abc_eqf_example.ipynb`)  
+  Implementing an equivariant filter for an Attitude-Bias-Calibration system.
 
 
 ## 🚀 Running Notebooks Locally
