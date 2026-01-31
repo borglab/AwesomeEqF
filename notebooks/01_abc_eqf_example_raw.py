@@ -1,8 +1,8 @@
 """
 Python translation of examples/AbcEquivariantFilterExample.cpp.
 
-Runs the Attitude-Bias-Calibration EqF demo using the wrapped C++
-EquivariantFilter (ABC-specific wrapper).
+Runs the Attitude-Bias-Calibration EqF demo using the C++
+EquivariantFilter (ABC-specific).
 """
 
 from __future__ import annotations
