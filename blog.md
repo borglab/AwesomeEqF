@@ -8,7 +8,7 @@ Welcome to the AwesomeEqF blog! Here you'll find tutorials, insights, and update
 
 ## Latest Posts
 
-- [**Introduction to Filters, Invariance, and Equivariance**](blog/2025-12-18-welcome.md)
+- [**A Friendly Walkthrough of the Equivariant Filter**](blog/2025-12-18-welcome.md)
 
 ---
 
