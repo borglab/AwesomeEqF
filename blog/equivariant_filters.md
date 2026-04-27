@@ -5,17 +5,22 @@ title: Equivariant Filters
 > **Date:** April 25th, 2026    
 > **Authors:** Rohan Bansal, Jennifer Oum, Frank Dellaert   
 
-In previous blog posts, we have discussed the following filters in GTSAM's hierarchy:
+In earlier posts, we looked at several filters in GTSAM's hierarchy:
+
 - `ManifoldEKF`
 - `LieGroupEKF`
 - `InvariantEKF`
 - `LeftLinearEKF`
 
-Recently, we have integrated a new `EquivariantFilter` into the library, inheriting from `ManifoldEKF`. In this blog post, we will dive into the theory of equivariant filters and how they can be used in GTSAM.
+Now we can add one more: `EquivariantFilter`, which inherits from `ManifoldEKF`.
 
-If you would like to read the original paper this is based on: [Equivariant Filter (EqF)](https://arxiv.org/abs/2010.14666) by van Goor, Hamel, and Mahony.
+This post is a gentle introduction to what an equivariant filter is, why it is useful, and what the GTSAM implementation is buying us.
 
-## A Representative Example
+If you want the original paper, this post is based on [Equivariant Filter (EqF)](https://arxiv.org/abs/2010.14666) by van Goor, Hamel, and Mahony.
+
+## Start With a Simple Example
+
+The cleanest example is the same one used in the paper and in GTSAM's simple attitude-only test.
 
 Imagine a robot carrying a gyroscope and a magnetometer. We want to estimate the direction of the magnetic field in the robot's body frame. That direction is a unit vector
 
@@ -35,84 +40,187 @@ $$
 y = c_m \eta.
 $$
 
-In this toy problem, the state lives on the sphere, not in Euclidean space. A standard EKF can still be made to work, but only by choosing local coordinates or embedding the sphere in $\mathbb{R}^3$ and enforcing a constraint.
+This is already enough to motivate EqF.
 
-The equivariant filter takes a cleaner route. Rather than embedding the sphere in $\mathbb{R}^3$ and correcting constraint violations, it exploits the rotational symmetry of the problem. The estimation error is defined through the action of `SO(3)` on $\mathbb{S}^2$, making the error intrinsic to the geometry of the state space. The filter then linearizes this symmetry-based error dynamics in the appropriate tangent space.
+The state is not a vector in plain Euclidean space. It lives on the sphere. A standard EKF can still be used, but it usually means doing one of two things:
 
-`<TODO: insert figure here>`
+1. choose local coordinates on the sphere, or
+2. embed the sphere in $\mathbb{R}^3$ and enforce the unit-length constraint separately
 
-## The Theory
+Both are workable. Neither feels especially natural.
 
-The EqF is easiest to think of as an error-state Kalman filter where the error is chosen by symmetry.
+EqF starts from a different question:
 
-The ingredients are:
+> what symmetry does this problem already have?
 
-- a Lie group $G$ acting on the state space $\mathcal{M}$
-- dynamics that transform compatibly with that action
-- a lift of the dynamics into the Lie algebra
+In this case, the symmetry is rotation. Rotations in `SO(3)` move one direction on the sphere to another. EqF uses that symmetry to define the estimation error.
 
-For the direction-estimation example:
+## Three Ideas, Gently
 
-- the state space is $\mathbb{S}^2$
-- the symmetry group is $\mathrm{SO}(3)$
-- rotations move one direction on the sphere to another
+To understand EqF, we only need three geometric ideas.
 
-In our example, the state space is not itself a Lie group, but it comes with a transitive group action. This is where EqF goes beyond the IEKF: it keeps the symmetry-first philosophy, but it works even when the state is not a Lie group.
+### 1. A manifold
 
-The central construction of an EqF is:
+A **manifold** is just a state space that may be curved globally, even if it looks flat locally.
 
-1. Pick a fixed reference point $\xi^\circ \in \mathcal{M}$.
-2. Represent the estimate with a group element $\hat{X} \in G$.
-3. Recover the manifold estimate by acting on the reference point:
+If you use GTSAM, you have already seen manifolds:
+
+- `Rot3`
+- `Pose3`
+- `Unit3`
+
+The sphere $\mathbb{S}^2$ is a manifold. So is the space of 3D rotations.
+
+### 2. A group
+
+A **group** is a set of transformations that you can compose, invert, and compare to an identity.
+
+For this post, the important example is `SO(3)`: the group of 3D rotations.
+
+### 3. A group action
+
+A **group action** is just a rule for how a transformation moves a state.
+
+That phrase can sound abstract, but here it is very simple:
+
+- the group is `SO(3)`
+- the state is a direction on the sphere
+- a rotation acts on that direction by rotating it
+
+That is all we need. EqF is about using that action to define an error in a smarter way.
+
+## The Main EqF Idea
+
+The easiest short description is:
+
+> EqF is an error-state Kalman filter where the error is chosen using symmetry.
+
+Instead of storing the estimate directly as a state $\hat{\xi}$ on the manifold, EqF stores a group element $\hat{X}$ and applies it to a fixed reference state $\xi^\circ$:
 
 $$
 \hat{\xi} = \phi(\hat{X}, \xi^\circ).
 $$
 
-This gives a geometric error
+Here, $\phi$ is just the action of the group on the state space.
+
+This gives a natural error:
 
 $$
 e = \phi(\hat{X}^{-1}, \xi).
 $$
 
-When the estimate is correct, the error lands at the fixed origin:
+If the estimate is correct, that error lands back at the fixed reference point:
 
 $$
 e = \xi^\circ.
 $$
 
-EqFs do not linearize arbitrary state coordinates around the current estimate. They linearize a symmetry-induced error around a fixed reference point. In local coordinates, the result still looks Kalman-like:
+This is the whole trick. EqF does not linearize arbitrary coordinates around the current estimate. It defines a geometry-aware error and linearizes that error around a fixed origin.
 
-1. propagate the estimate
-2. propagate the covariance
-3. linearize the error dynamics
-4. apply a gain-based correction
+The result still looks like an EKF:
 
-Essentially the EqF is building on top of the EKF, and choosing better error coordinates due to the symmetry of the situation.
+- propagate the estimate
+- propagate the covariance
+- linearize the error dynamics
+- apply a gain-based correction
 
-## What does it look like in GTSAM?
+So EqF is not throwing away Kalman filtering. It is choosing a better error coordinate system.
+
+## Why This Is Different From the IEKF
+
+The IEKF is most natural when the state itself is a Lie group, such as `Rot3` or `Pose3`.
+
+EqF is more general. It also works when the state is not a Lie group, but still has a symmetry group acting on it.
+
+That is exactly what happens in the direction-estimation example:
+
+- the state is on $\mathbb{S}^2$
+- the symmetry group is `SO(3)`
+
+The sphere is not a Lie group, but rotations still act on it. EqF is built to take advantage of that.
+
+## What It Looks Like in GTSAM
 
 In GTSAM, the generic implementation lives in `gtsam/navigation/EquivariantFilter.h`.
 
-The class is templated on a manifold state type `M`, a symmetry functor `Symmetry`, and it inherits from `ManifoldEKF<M>`. Rather than treating EqF as a separate special-purpose filter, GTSAM keeps it within the existing family of filters to leverage base-class functionality.
+It is templated on:
 
-The generic class stores two important objects:
+- a manifold state type `M`
+- a symmetry functor `Symmetry`
 
-- a reference state `xi_ref`, which is the fixed EqF origin
-- a group estimate `g`, which is the lifted state
+and it inherits from `ManifoldEKF<M>`.
 
-The current manifold estimate is obtained by applying the group action to `xi_ref`. That is the implementation version of
+That design is important. GTSAM is not implementing EqF as some completely separate filter stack. It reuses the same manifold-EKF machinery and adds the symmetry-specific pieces on top.
 
-$$
-\hat{\xi} = \phi(\hat{X}, \xi^\circ).
-$$
+The generic class stores two especially important objects:
 
-The class also computes the differential of the action at the identity and its pseudoinverse. That pseudoinverse is the **innovation lift** used to map a correction in manifold error coordinates back to the group. `TODO: explain this more, maybe have a figure`
+- `xi_ref`, the fixed reference state
+- `g`, the lifted group estimate
 
-## Rohan-notes for things to add to this post
+The current state estimate is recovered by applying the group action to `xi_ref`.
 
-- Once you provide the manifold, the symmetry, the lift, and the measurement model, the EKF machinery is already there. You do not need to reimplement Kalman gains, Joseph updates, or covariance propagation each time.
-- 
+So the abstract EqF picture becomes very concrete in code:
+
+- the fixed origin becomes `xi_ref`
+- the lifted estimate becomes `g`
+- the group action turns `g` into the current state estimate
+
+The implementation also computes the linear map that takes a small correction on the manifold side and lifts it back to the group side. You do not need to understand the full differential-geometry machinery to use it. The main point is that GTSAM handles this bookkeeping inside the filter.
+
+## Why This Is Useful for GTSAM Users
+
+There are three practical benefits.
+
+### 1. The geometry stays explicit
+
+EqF is really about geometry, so it is a good fit for a library that already has types like `Rot3`, `Pose3`, and `Unit3`. You can write the filter in terms of geometric objects instead of flattening everything into anonymous matrices.
+
+### 2. You only provide the model-specific ingredients
+
+Once you define:
+
+- the state manifold
+- the symmetry action
+- the lift
+- the measurement model
+
+the rest of the EKF machinery is already there. You do not need to rewrite Kalman gains, covariance propagation, or Joseph updates.
+
+### 3. There is a clean learning path
+
+The simplest place to start is the attitude-only `Unit3` / `Rot3` example in `gtsam/navigation/tests/testEquivariantFilter.cpp`.
+
+That example is valuable because it keeps the focus on the central EqF idea:
+
+- a state on a manifold
+- a group acting on that state
+- an error defined through the action
+
+without introducing extra state components too early.
+
+## Where the Richer Example Fits
+
+Once the simple example makes sense, the next step is the ABC filter in:
+
+- `gtsam_unstable/geometry/ABCEquivariantFilter.h`
+- `examples/AbcEquivariantFilterExample.cpp`
+
+That wrapper takes the generic EqF machinery and turns it into a friendlier application-specific API with methods like:
+
+- `predict(omega, inputCovariance, dt)`
+- `update(y, d, R, cal_idx)`
+
+along with accessors for attitude, bias, and calibration.
+
+That is a great second example. But it is easier to appreciate after the simpler `Unit3` / `Rot3` picture is already in place.
+
+## Takeaway
+
+If you know GTSAM but do not spend your day thinking about manifolds and group actions, the right mental model is:
+
+> EqF is an EKF that uses the natural transformations of the problem to define the error.
+
+That is why it belongs in GTSAM's hierarchy. It builds directly on `ManifoldEKF`, keeps the geometry explicit, and works naturally in cases where the state is more general than a Lie group.
 
 ## Further Reading
 
