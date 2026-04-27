@@ -11,7 +11,7 @@ project:
         - file: notebooks/02_eqvio_example.ipynb
     - file: blog.md
       children:
-        - file: blog/2025-12-18-welcome.md
+        - file: blog/equivariant_filters.md
     - file: CONTRIBUTING.md
 site:
   options:
