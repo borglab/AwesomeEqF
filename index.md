@@ -14,9 +14,6 @@ Explore:
 **I have no idea what "EqFs" are!**  
   Check out the [intro blog post first](https://gtsam.org/2026/04/28/equivariant.html) on the GTSAM website for an explanation! Then, feel free to follow the **Papers and Reading** page for a structured list of key papers as per your interest.
 
-**I want to see things in action!**  
-  Visit the **Examples and Implementations** section for step-by-step Jupyter notebooks implementing the core ideas, papers, and beyond.
-
 **How do I properly use GTSAM?**  
   Check out the [GTSAM documentation](https://borglab.github.io/gtsam).
 

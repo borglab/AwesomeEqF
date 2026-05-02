@@ -9,8 +9,8 @@ dependencies = [
     "ipykernel>=6.0.0",
     "jupyter>=1.0.0",
     "jupyter-book>=2.1.0",
-    "matplotlib>=3.4.0",
     "notebook>=6.4.0",
     "numpy>=1.21.0",
+    "plotly>=6.7.0",
     "scipy>=1.7.0",
 ]
