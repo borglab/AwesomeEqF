@@ -115,6 +115,7 @@ name = "awesomeeqf"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "gtsam-develop" },
     { name = "ipykernel" },
     { name = "jupyter" },
     { name = "jupyter-book" },
@@ -126,6 +127,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "gtsam-develop", specifier = ">=4.3a1.dev202605012141" },
     { name = "ipykernel", specifier = ">=6.0.0" },
     { name = "jupyter", specifier = ">=1.0.0" },
     { name = "jupyter-book", specifier = ">=2.1.0" },
@@ -447,6 +449,23 @@ wheels = [
 ]
 
 [[package]]
+name = "gtsam-develop"
+version = "4.3a1.dev202605012141"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "pytest" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/70/61/43bbef48be785d0db036105e3bf88dc038bdb9f20d4f82e67b868ea6ff91/gtsam_develop-4.3a1.dev202605012141-cp313-cp313-macosx_10_15_universal2.whl", hash = "sha256:5c74e5ffebb250958d25a81a45f50f774f3a7f585cf5ec3a806e1f93094afc9c", size = 42527391 },
+    { url = "https://files.pythonhosted.org/packages/e4/4a/3dce7010d95067b3fb57773982532ba299230dfb569eb3aab1abcd2ff4f7/gtsam_develop-4.3a1.dev202605012141-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:a928705ed8b83558174e734f491ad4425c9ccd29610db10f435945863cb1c3bf", size = 30153611 },
+    { url = "https://files.pythonhosted.org/packages/34/0b/cf26ecbde6afdc02d126c45680949790c7d2ba3ee5012983941c1405c57d/gtsam_develop-4.3a1.dev202605012141-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:e83d7d27ea3d5f3cb05eb91d521f2aaa00b5f86971cefc4e1b76b7f6a260592d", size = 31578130 },
+    { url = "https://files.pythonhosted.org/packages/36/dc/a4ef59a4cbdcf079d9d341f1e16c1dab63afa7abeb453a9f83798d8ab7ef/gtsam_develop-4.3a1.dev202605012141-cp314-cp314-macosx_10_15_universal2.whl", hash = "sha256:c2b909bb8a2faf3d3eddc724d245fcab75f3635d4b379dc9333c14698d766c9a", size = 42548466 },
+    { url = "https://files.pythonhosted.org/packages/89/b0/723a2f3066499f7008c5f4b942797afa98b85e528b4d5769350dd53aaad5/gtsam_develop-4.3a1.dev202605012141-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:e7bcf59cf3d21ff3fb6a8ab1457387354dd7925c5e2480a7a7c3bee1b8c61556", size = 30179367 },
+    { url = "https://files.pythonhosted.org/packages/9e/bc/6acefb76ff9c885609da8e15cf8f20de521b6c9cc12f731ae0d5fa634caa/gtsam_develop-4.3a1.dev202605012141-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:989f32805d8721bdf4d5aed040f7d69c3a4e93f28af3847f2c463926b3b6b263", size = 31578732 },
+]
+
+[[package]]
 name = "h11"
 version = "0.16.0"
 source = { registry = "https://pypi.org/simple" }
@@ -490,6 +509,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz", hash = "sha256:795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902", size = 194582 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/0e/61/66938bbb5fc52dbdf84594873d5b51fb1f7c7794e9c0f5bd885f30bc507b/idna-3.11-py3-none-any.whl", hash = "sha256:771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea", size = 71008 },
+]
+
+[[package]]
+name = "iniconfig"
+version = "2.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/72/34/14ca021ce8e5dfedc35312d08ba8bf51fdd999c576889fc2c24cb97f4f10/iniconfig-2.3.0.tar.gz", hash = "sha256:c76315c77db068650d49c5b56314774a7804df16fee4402c1f19d6d15d8c4730", size = 20503 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cb/b1/3846dd7f199d53cb17f49cba7e651e9ce294d8497c8c150530ed11865bb8/iniconfig-2.3.0-py3-none-any.whl", hash = "sha256:f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12", size = 7484 },
 ]
 
 [[package]]
@@ -1321,6 +1349,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pluggy"
+version = "1.6.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f9/e2/3e91f31a7d2b083fe6ef3fa267035b518369d9511ffab804f839851d2779/pluggy-1.6.0.tar.gz", hash = "sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3", size = 69412 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/54/20/4d324d65cc6d9205fabedc306948156824eb9f0ee1633355a8f7ec5c66bf/pluggy-1.6.0-py3-none-any.whl", hash = "sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746", size = 20538 },
+]
+
+[[package]]
 name = "prometheus-client"
 version = "0.23.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1410,6 +1447,22 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/f2/a5/181488fc2b9d093e3972d2a472855aae8a03f000592dbfce716a512b3359/pyparsing-3.2.5.tar.gz", hash = "sha256:2df8d5b7b2802ef88e8d016a2eb9c7aeaa923529cd251ed0fe4608275d4105b6", size = 1099274 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/10/5e/1aa9a93198c6b64513c9d7752de7422c06402de6600a8767da1524f9570b/pyparsing-3.2.5-py3-none-any.whl", hash = "sha256:e38a4f02064cf41fe6593d328d0512495ad1f3d8a91c4f73fc401b3079a59a5e", size = 113890 },
+]
+
+[[package]]
+name = "pytest"
+version = "9.0.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "iniconfig" },
+    { name = "packaging" },
+    { name = "pluggy" },
+    { name = "pygments" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7d/0d/549bd94f1a0a402dc8cf64563a117c0f3765662e2e668477624baeec44d5/pytest-9.0.3.tar.gz", hash = "sha256:b86ada508af81d19edeb213c681b1d48246c1a91d304c6c81a427674c17eb91c", size = 1572165 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d4/24/a372aaf5c9b7208e7112038812994107bc65a84cd00e0354a88c2c77a617/pytest-9.0.3-py3-none-any.whl", hash = "sha256:2c5efc453d45394fdd706ade797c0a81091eccd1d6e4bccfcd476e2b8e0ab5d9", size = 375249 },
 ]
 
 [[package]]

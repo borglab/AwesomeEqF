@@ -2,19 +2,20 @@
 title: 🕶️ Awesome Equivariant Filtering
 ---
 
-Welcome to **AwesomeEqF**, a curated collection of the latest and greatest literature on equivariant (and invariant) filtering. 
+![Header Figure](images/header_figure.png)
 
-Explore the [Papers and Reading](papers.md) for a structured list of key literature and check out our practical [Examples and Implementations](notebooks.md), made simple through the use of [GTSAM](https://github.com/borglab/gtsam).
+Hello and welcome to a curated collection of the latest and greatest literature on equivariant filtering! 
 
-Be sure to browse our [Blog](blog.md) posts as well, which will be updated with insights from time to time to support your learning journey.
-
-### 📚 How to Use This Site
+Explore:
+- [Papers and Reading](papers.md) for a structured list of key literature 
+- [Examples and Implementations](notebooks.md) to dive into code examples, made simple through the use of [GTSAM](https://github.com/borglab/gtsam)
+- [Blog](blog.md) posts, updated with insights from time to time to explore cool things the community has learned about equivariant filters
 
 **I have no idea what "EqFs" are!**  
-  Check out the [intro blog post first](blog/2025-12-18-welcome.md) for an explanation! Then, feel free to follow the **Papers and Reading** page for a structured list of key papers as per your interest.
+  Check out the [intro blog post first](https://gtsam.org/2026/04/28/equivariant.html) on the GTSAM website for an explanation! Then, feel free to follow the **Papers and Reading** page for a structured list of key papers as per your interest.
 
 **I want to see things in action!**  
-  Visit the **Implementations and Notebooks** section for step-by-step Jupyter notebooks implementing the core ideas, papers, and beyond.
+  Visit the **Examples and Implementations** section for step-by-step Jupyter notebooks implementing the core ideas, papers, and beyond.
 
 **How do I properly use GTSAM?**  
   Check out the [GTSAM documentation](https://borglab.github.io/gtsam).
