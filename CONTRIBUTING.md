@@ -2,7 +2,7 @@
 title: Contributing
 ---
 
-## How Can I Contribute to Awesome Invariant and Equivariant Filtering?
+## How Can I Contribute to Awesome Equivariant Filtering?
 
 ### Adding a New Resource
 
