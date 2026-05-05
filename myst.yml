@@ -9,9 +9,6 @@ project:
       children:
         - file: notebooks/01_abc_eqf_example.ipynb
         - file: notebooks/02_eqvio_example.ipynb
-    - file: blog.md
-      children:
-        - file: blog/equivariant_filters.md
     - file: CONTRIBUTING.md
 site:
   options:
