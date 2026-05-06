@@ -5,10 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "ghp-import>=2.1.0",
     "gtsam-develop>=4.3a1.dev202605012141",
     "ipykernel>=6.0.0",
     "jupyter>=1.0.0",
     "jupyter-book>=2.1.0",
+    "mystmd>=1.9.0",
     "notebook>=6.4.0",
     "numpy>=1.21.0",
     "plotly>=6.7.0",

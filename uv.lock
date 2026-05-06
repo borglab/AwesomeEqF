@@ -115,10 +115,12 @@ name = "awesomeeqf"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "ghp-import" },
     { name = "gtsam-develop" },
     { name = "ipykernel" },
     { name = "jupyter" },
     { name = "jupyter-book" },
+    { name = "mystmd" },
     { name = "notebook" },
     { name = "numpy" },
     { name = "plotly" },
@@ -127,10 +129,12 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "ghp-import", specifier = ">=2.1.0" },
     { name = "gtsam-develop", specifier = ">=4.3a1.dev202605012141" },
     { name = "ipykernel", specifier = ">=6.0.0" },
     { name = "jupyter", specifier = ">=1.0.0" },
     { name = "jupyter-book", specifier = ">=2.1.0" },
+    { name = "mystmd", specifier = ">=1.9.0" },
     { name = "notebook", specifier = ">=6.4.0" },
     { name = "numpy", specifier = ">=1.21.0" },
     { name = "plotly", specifier = ">=6.7.0" },
@@ -349,6 +353,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/30/3e/a80a8c077fd798951169626cde3e239adeba7dab75deb3555716415bd9b0/fqdn-1.5.1.tar.gz", hash = "sha256:105ed3677e767fb5ca086a0c1f4bb66ebc3c100be518f0e0d755d9eae164d89f", size = 6015 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cf/58/8acf1b3e91c58313ce5cb67df61001fc9dcd21be4fadb76c1a2d540e09ed/fqdn-1.5.1-py3-none-any.whl", hash = "sha256:3a179af3761e4df6eb2e026ff9e1a3033d3587bf980a0b1b2e1e5d08d7358014", size = 9121 },
+]
+
+[[package]]
+name = "ghp-import"
+version = "2.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-dateutil" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d9/29/d40217cbe2f6b1359e00c6c307bb3fc876ba74068cbab3dde77f03ca0dc4/ghp-import-2.1.0.tar.gz", hash = "sha256:9c535c4c61193c2df8871222567d7fd7e5014d835f97dc7b7439069e2413d343", size = 10943 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f7/ec/67fbef5d497f86283db54c22eec6f6140243aae73265799baaaa19cd17fb/ghp_import-2.1.0-py3-none-any.whl", hash = "sha256:8337dd7b50877f163d4c0289bc1f1c7f127550241988d568c1db512c4324a619", size = 11034 },
 ]
 
 [[package]]
@@ -887,6 +903,19 @@ wheels = [
 ]
 
 [[package]]
+name = "mystmd"
+version = "1.9.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "nodeenv" },
+    { name = "platformdirs" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6b/40/8f2a7816ddf649671068f6f9f54d813885dee08517b7369dbeb6ca08b487/mystmd-1.9.0.tar.gz", hash = "sha256:bdae4af2966b4e6f20bb8bbb507b3146d340c3ee451ab452cd0982f383588a65", size = 2979307 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8a/b0/8d7d1b94daaafe0f798709aed795167fb9c1b0099e2b758645914e010697/mystmd-1.9.0-py3-none-any.whl", hash = "sha256:aed6254d93664543956343d30e215757c7a4d1ce6b5e23fba872607c3d2b1ee0", size = 3011013 },
+]
+
+[[package]]
 name = "narwhals"
 version = "2.20.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1089,11 +1118,11 @@ wheels = [
 
 [[package]]
 name = "platformdirs"
-version = "4.5.1"
+version = "4.2.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/cf/86/0248f086a84f01b37aaec0fa567b397df1a119f73c16f6c7a9aac73ea309/platformdirs-4.5.1.tar.gz", hash = "sha256:61d5cdcc6065745cdd94f0f878977f8de9437be93de97c1c12f853c9c0cdcbda", size = 21715 }
+sdist = { url = "https://files.pythonhosted.org/packages/f5/52/0763d1d976d5c262df53ddda8d8d4719eedf9594d046f117c25a27261a19/platformdirs-4.2.2.tar.gz", hash = "sha256:38b7b51f512eed9e84a22788b4bce1de17c0adb134d6becb09836e37d8654cd3", size = 20916 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/cb/28/3bfe2fa5a7b9c46fe7e13c97bda14c895fb10fa2ebf1d0abb90e0cea7ee1/platformdirs-4.5.1-py3-none-any.whl", hash = "sha256:d03afa3963c806a9bed9d5125c8f4cb2fdaf74a55ab60e5d59b3fde758104d31", size = 18731 },
+    { url = "https://files.pythonhosted.org/packages/68/13/2aa1f0e1364feb2c9ef45302f387ac0bd81484e9c9a4c5688a322fbdfd08/platformdirs-4.2.2-py3-none-any.whl", hash = "sha256:2d7a1657e36a80ea911db832a8a6ece5ee53d8de21edd5cc5879af6530b1bfee", size = 18146 },
 ]
 
 [[package]]
