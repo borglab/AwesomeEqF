@@ -1,9 +1,9 @@
-name: Deploy Jupyter Book to GitHub Pages
+name: deploy-book
 
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 jobs:
