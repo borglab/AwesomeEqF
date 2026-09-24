@@ -82,6 +82,10 @@ This page collects and categorizes key papers on invariant and equivariant filte
   _Robert Mahony, Tarek Hamel, Jochen Trumpf_  
   Technical companion to the EqF papers that develops the underlying systems-theoretic foundation: equivariant lifts, the relationship between symmetry groups and homogeneous state spaces, and the structural properties that enable EqF and IEKF design.
 
+- **[Equivariant Filter Design for Discrete-time systems](https://arxiv.org/abs/2209.04965)** (2022)  
+  _Yixiao Ge, Pieter van Goor, Robert Mahony_  
+  Presents the equivariant structure of a discrete-time system and proposes a discrete-time version of the EqF.
+
 ### 2.2 Advanced EqF Architectures
 
 - **[Equivariant Filter Design for Inertial Navigation Systems with Input Measurement Biases](https://arxiv.org/pdf/2202.02058)** (2022)  
@@ -107,6 +111,10 @@ This page collects and categorizes key papers on invariant and equivariant filte
 - **[Overcoming Bias: Equivariant Filter Design for Biased Attitude Estimation with Online Calibration](https://arxiv.org/abs/2209.12038)** (2022)  
   _Alessandro Fornasier, Yonhon Ng, Christian Brommer, Christoph Böhm, Robert Mahony, Stephan Weiss_  
   Paper that introduces a new generic formulation for a gyroscope aided attitude estimator, taking advantage of states in a single equivariant geometric structure.
+
+- **[Equivariant Filter for Radar-Inertial Odometry](https://arxiv.org/abs/2604.23033)** (2026)  
+  _Giulio Delama, Jan Michalczyk, Morten Nissov, Martin Scheiber, Alessandro Fornasier, Kostas Alexis, Stephan Weiss_  
+  Proposes a discrete-time EqF for RIO based on a state-of-the-art Lie group symmetry that geometrically couples navigation states and IMU biases, and incorporates radar-IMU extrinsic calibration and multi-state constraint updates.
 
 ## 3. Applications and Advanced Topics
 
@@ -147,6 +155,12 @@ This page collects and categorizes key papers on invariant and equivariant filte
 - **[Eq-LIO: Equivariant Filter for Tightly Coupled LiDAR-Inertial Odometry](https://arxiv.org/abs/2409.06948)** (2024)  
   _Anbo Tao, Yarong Luo, Chunxi Xia, Chi Guo, Xingxing Li_  
   An EqF-based tightly coupled LiDAR-inertial odometry system. Uses a semi-direct product symmetry group that jointly couples IMU bias, navigation state, and LiDAR extrinsic calibration into a single equivariant structure, suppressing linearization error and improving robustness.
+
+### 3.4 IMU Preintegration
+
+- **[Equivariant IMU Preintegration with Biases: a Galilean Group Approach](https://arxiv.org/abs/2411.05548)** (2024)  
+  _Giulio Delama, Alessandro Fornasier, Robert Mahony, Stephan Weiss_  
+  An equivariant formulation of discrete-time IMU preintegration on the left-trivialized tangent group of the Galilean group.
 
 ## 4. General Equivariance
 
